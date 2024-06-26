@@ -30,6 +30,9 @@ public:
     void parsejson(QByteArray &byteArray);
     void updateUI();
 
+protected:
+    void paintEvent(QPaintEvent *event) override; // 重载 paintEvent
+
 private slots:
     void on_pushButton_clicked();
 
@@ -47,6 +50,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    float Opacity; //透明度控制
     QNetworkAccessManager* mNetAccessManager;
     void onReplied(QNetworkReply *reply);
     Now mnow;
