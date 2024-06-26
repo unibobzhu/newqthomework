@@ -19,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setWindowFlag(Qt::FramelessWindowHint);//消除边框
+    Opacity = 1.0; // 透明度设置
+    this->setWindowOpacity(Opacity);
     setFixedSize(width(),height());//固定大小
     mExitMenu=new QMenu(this);
     mExitAct=new QAction();
@@ -189,3 +191,11 @@ void MainWindow::on_pushButton_7_clicked()
     into->show();
 }
 
+void MainWindow::paintEvent(QPaintEvent *event)
+{
+    QPainter painter(this);
+    QLinearGradient gradient(0, 0, 0, height());
+    gradient.setColorAt(0.0, QColor("#D5AB98"));
+    gradient.setColorAt(1.0, QColor("#4AA1B0"));
+    painter.fillRect(rect(), gradient);
+}
