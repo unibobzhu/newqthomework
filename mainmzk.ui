@@ -23,6 +23,19 @@
     </rect>
    </property>
   </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>170</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>请点击相应日期</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
