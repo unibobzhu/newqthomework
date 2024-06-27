@@ -32,7 +32,7 @@ MainWindow::MainWindow(QWidget *parent)
     });
     mNetAccessManager=new QNetworkAccessManager(this);
     connect(mNetAccessManager,&QNetworkAccessManager::finished,this,&MainWindow::onReplied);
-
+    ui->pushButton_6->setIcon(QIcon("C:\\Users\\LENOVO\\Desktop\\check.png"));
     getWeatherInfo("beijing");//请求天气数据
 
 }
@@ -130,6 +130,10 @@ void MainWindow::updateUI()
     QPixmap pixmap(QString("C:\\Users\\LENOVO\\Desktop\\white\\%1@1x.png").arg(code));
     ui->label_code->setPixmap(pixmap);
     ui->label_code->show();
+    QPixmap pixmapp(QString("C:\\Users\\LENOVO\\Desktop\\ch.png"));
+    ui->label_2->setPixmap(pixmapp);
+    ui->label_2->show();
+
 }
 
 void MainWindow::onReplied(QNetworkReply *reply)
