@@ -140,10 +140,6 @@
      <property name="text">
       <string/>
      </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>C:/Users/LENOVO/Desktop/check.png</normaloff>C:/Users/LENOVO/Desktop/check.png</iconset>
-     </property>
     </widget>
    </widget>
    <widget class="QPushButton" name="pushButton">
@@ -228,6 +224,22 @@
     </property>
     <property name="text">
      <string>日历</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>220</y>
+      <width>421</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> </string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
